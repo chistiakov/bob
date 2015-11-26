@@ -9,9 +9,9 @@ import java.io.IOException;
  */
 public interface XdrSerializable {
     /**
-     * must produce padding as well - pad with 0's to a multiple of 4 bytes
      * @param output XdrOutput to serialize to
+     * @return number of bytes written to output
      * @throws IOException
      */
-    void serializeTo(XdrOutput output) throws IOException;
+    int serializeTo(XdrOutput output) throws IOException;
 }
