@@ -15,10 +15,10 @@
  * along with Bob. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.radai.bob.model.xdr;
+package net.radai.bob.codegen;
 
 /**
- * @author Radai Rosenblatt
+ * Created by Radai Rosenblatt
  */
-public class XdrObject {
+public abstract class Typedef {
 }

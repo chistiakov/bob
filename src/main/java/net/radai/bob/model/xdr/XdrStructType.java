@@ -43,14 +43,22 @@ public class XdrStructType extends XdrType implements Scope {
         fields.add(field);
     }
 
-    @Override
-    public Identifiable resolve(String identifier) {
+    public List<XdrDeclaration> getFields() {
+        return fields;
+    }
+
+    public XdrDeclaration getField(String identifier) {
         for (XdrDeclaration field : fields) {
             if (field.getIdentifier().equals(identifier)) {
                 return field;
             }
         }
         return null;
+    }
+
+    @Override
+    public Identifiable resolve(String identifier) {
+        return getField(identifier);
     }
 
     @Override
